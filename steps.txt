@@ -1,0 +1,19 @@
+This text document contains the steps for execution of the document "milvus-manage_text_embeddings.py"
+Open Docker Desktop -> Run as Administrator
+Ensure that you have "docker-compose.yml" in your directory
+
+Run "docker compose up -d" in the terminal to start Milvus
+
+Ensure that dependencies are installed in environment (refer to the document: dependencies.txt)
+[Activate environment: myenv/Scripts/Activate]
+
+Once Milvus containers are up — run your Flask API:
+python api_server.py
+
+In case previous containers are not cleaned up properly, run the following command to do so:
+docker rm -f milvus-standalone milvus-etcd milvus-minio
+Then run this again: docker compose up -d
+Confirm that the containers are up by running: docker ps
+
+To prune all stopped containers, use:
+docker container prune

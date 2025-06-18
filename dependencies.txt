@@ -1,0 +1,2 @@
+pip install pymilvus sentence-transformers
+pip install flask
