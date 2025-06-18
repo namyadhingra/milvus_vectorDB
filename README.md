@@ -41,6 +41,13 @@ This repository provides a practical example of using [Milvus](https://milvus.io
 - **Port 19530**: This is the default gRPC port used by Milvus for SDK connections. Ensure this port is open.
 ---
 
+When connecting to Milvus, you may encounter the following error:
+
+```
+pymilvus.exceptions.MilvusException: <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+```
+
+---
 ## Script Workflow: `milvus_manage_text_embeddings.py`
 
 This script demonstrates the following steps[#]:
@@ -54,6 +61,14 @@ This script demonstrates the following steps[#]:
 7. **API to Query from Milvus**
 
 For a detailed walkthrough and code reference, see [this tutorial](https://jimmy-wang-gen-ai.medium.com/milvus-a-complete-example-of-how-to-use-vectordb-by-python-and-serve-it-as-an-api-3a05e2f8db3c).
+
+---
+
+About the `without_api` Folder
+This folder contains scripts that focus on direct interaction with Milvus for tasks such as connecting, inserting, querying, updating, and deleting embeddings, similar to the main workflow but without the Flask API interface.
+
+Note:
+The scripts in the without_api folder are currently not working. Troubleshooting and updates are required.
 
 ---
 
